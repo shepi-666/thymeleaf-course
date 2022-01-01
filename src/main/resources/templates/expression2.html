@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>标准变量表达式</title>
+</head>
+<body>
+
+
+<h3>标准变量表达式</h3>
+
+<div th:object="${role}">
+    <p>使用星号变量表达式获取对象的值</p>
+    <p th:text="*{id}">id</p>
+    <p th:text="*{name}">姓名</p>
+    <p th:text="*{gender}">性别</p>
+    <p th:text="*{age}">年龄</p>
+</div>
+
+</body>
+</html>

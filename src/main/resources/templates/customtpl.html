@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>使用自定义模板</title>
+</head>
+<body>
+
+<div style="margin-left: 500px">
+  <h2>插入模板</h2>
+  <div th:insert="~{head :: top}">
+    第一种方式使用模板， th:insert
+  </div>
+
+  <br>
+  <h2>包含模板的方式</h2>
+  <div th:include="head :: top">
+    包含模板 th:include
+  </div>
+
+
+  <br>
+  <br>
+
+  <h2>使用整个html作为模板</h2>
+  <div th:include="footer :: html"></div>
+  <div th:include="footer"></div>
+
+</div>
+
+
+</body>
+</html>

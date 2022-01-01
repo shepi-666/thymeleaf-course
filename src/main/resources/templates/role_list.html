@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>角色表</title>
+</head>
+<body>
+
+<table border="1" cellspacing="0" style="text-align: center">
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>年龄</th>
+  </tr>
+  <tr th:each="role:${roles}">
+    <td th:text="${role.id}"></td>
+    <td th:text="${role.name}"></td>
+    <td th:text="${role.gender}"></td>
+    <td th:text="${role.age}"></td>
+  </tr>
+</table>
+
+
+
+<h2>测试循环数组</h2>
+<div style="text-align: center">
+  <table border="1" cellspacing="0" style="text-align: center">
+    <tr>
+      <th>编号</th>
+      <th>姓名</th>
+      <th>性别</th>
+      <th>年龄</th>
+    </tr>
+    <tr th:each="role:${roleArray}">
+      <td th:text="${role.id}"></td>
+      <td th:text="${role.name}"></td>
+      <td th:text="${role.gender}"></td>
+      <td th:text="${role.age}"></td>
+    </tr>
+  </table>
+</div>
+
+
+<h2>测试map</h2>
+<div style="margin: auto">
+  <table border="1" cellspacing="0" style="text-align: center">
+    <tr>
+      <th>编号</th>
+      <th>姓名</th>
+      <th>性别</th>
+      <th>年龄</th>
+    </tr>
+    <tr th:each="data:${roleMap}">
+      <td th:text="${data.value.id}"></td>
+      <td th:text="${data.value.name}"></td>
+      <td th:text="${data.value.gender}"></td>
+      <td th:text="${data.value.age}"></td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

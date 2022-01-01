@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>模板属性</title>
+
+    <script type="text/javascript" th:src="@{static/js/jquery-3.3.1.min.js}"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                alert("jquery")
+            })
+        });
+    </script>
+</head>
+<body>
+
+<div style="margin-left: 400px">
+
+  <h3>属性使用</h3>
+  <form th:action="@{/login}" th:method="${methodAttr}">
+      <input th:type="text" name="name" th:value="${name}">
+      <input type="button" id="btn" th:onclick="btnClick()">
+  </form>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试if和unless</title>
+</head>
+<body>
+
+<div style="margin-left: 400px">
+    <h2>if语句的使用</h2>
+    <p th:if="${sex == 'male'}">性别为男</p><br>
+    <p th:if="${isLogin}">已经登录</p><br>
+    <!--null的值是false-->
+    <p th:if="${isOld}">老头子</p><br>
+    <!--空字符串的值是true-->
+    <p th:if="${name}">name是""</p>
+</div>
+
+</body>
+</html>
